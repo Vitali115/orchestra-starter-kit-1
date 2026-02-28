@@ -1,22 +1,43 @@
 @import "tailwindcss";
 
-:root {
+/* ── Light tokens ── */
+:root,
+[data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #6b7280;
+  --subtle: #d1d5db;
+  --border: #e5e7eb;
+  --surface: #f3f4f6;
+  --bar-bg: rgba(255, 255, 255, 0.7);
+  --bar-border: rgba(0, 0, 0, 0.08);
+  --bar-text: #171717;
+  --overlay-bg: #000000;
+}
+
+/* ── Dark tokens ── */
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #e5e5e5;
+  --muted: #888888;
+  --subtle: #444444;
+  --border: #252525;
+  --surface: #1a1a1a;
+  --bar-bg: rgba(0, 0, 0, 0.3);
+  --bar-border: rgba(255, 255, 255, 0.1);
+  --bar-text: #f3f4f6;
+  --overlay-bg: #141414;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
